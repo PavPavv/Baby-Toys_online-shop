@@ -1,0 +1,28 @@
+mixin informNavLink(link,text,mod)
+	li(class=mod).inform-nav__item
+		a(href=link).inform-nav__link= text
+
+.header__top
+	.container
+		.header__content
+			nav.header__nav.inform-nav
+				ul.inform-nav__list
+					+informNavLink('static-page.html','О компании')
+					+informNavLink('','Доставка и оплата')
+					+informNavLink('','Акции')
+					+informNavLink('','Оптовикам')
+					+informNavLink('','Новости')
+					+informNavLink('','Гарантии')
+					+informNavLink('','Контакты')
+					li.inform-nav__tablet-toggle
+						+icon('dots','inform-nav__tablet-icon')
+						.inform-subnav
+							.inform-subnav__arrow
+							ul.inform-subnav__list
+								each item in ['Акции','Оптовикам','Новости','Гарантия']
+									li.inform-subnav__item
+										a(href="").inform-subnav__link=item
+			nav.header__nav.header__nav--right.inform-nav
+				ul.inform-nav__list
+					+informNavLink('','Регистрация')
+					+informNavLink('','Вход')

@@ -1,0 +1,32 @@
+.hits{
+
+	&-navigation{
+		display: flex;
+		align-items: center;
+
+		&__item{
+			flex: 1;
+			height: 50px;
+			border-bottom: 2px solid $form-color;
+			margin-right: 30px;
+			line-height: 48px;
+			text-align: center;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			&:hover{
+				border-bottom-color: $main-company-color;
+			}
+
+			&.tabs-navigation__item--active{
+				border-bottom-color: $main-company-color;
+			}
+		}
+	}
+
+	&__body{
+		padding-top: 20px;
+	}
+}

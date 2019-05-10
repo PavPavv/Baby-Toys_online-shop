@@ -1,0 +1,159 @@
+.brands{
+	border-top: 1px solid $form-color;	
+	padding-top: 30px;
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media (max-width: $tablet-size) {
+			justify-content: space-around;
+		}	
+
+		& > * {
+			flex: 0 0 16%;
+			width: 16%;
+			margin-bottom: 45px;
+			@media (max-width: $tablet-size) {
+				flex: 0 0 25%;
+				width: 25%;
+			}
+			@media (max-width: $phone-size) {
+				flex: 0 0 50%;
+				width: 50%;
+			}
+		}
+
+		&-small{
+			display: flex;
+			flex-wrap: wrap;
+			@media (max-width: $tablet-size) {
+				flex-wrap: nowrap;
+				overflow: auto;
+				margin-right: -15px;
+			}
+
+			& > * {
+				margin-right: 10px;
+				margin-bottom: 10px;
+
+				&:nth-child(3n + 3){
+					margin-right: 0;
+
+					@media(max-width: $tablet-size) {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}	
+.brand{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $corporate-color;
+
+	&__img{
+		max-width: 110px;
+		max-height: 80px;
+		margin-bottom: 5px;
+		transition: all linear .3s;
+
+		&:hover{
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05);
+		}
+	}
+
+	&-info{
+		display: flex;
+		align-items: flex-start;
+		@media(max-width: $phone-size){
+			flex-direction: column;
+		}
+
+		& > * {
+			margin-right: 30px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		&__tablet{
+			flex: 0 0 255px;
+			width: 255px;
+			@media (max-width: $phone-size) {
+				flex: 1;
+				width: 100%;
+			}
+
+			& > * {
+				margin: 20px 0;
+				&:first-child{
+					margin-top: 0;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $form-color;
+		border-radius: 2px;
+		padding: 40px;
+
+		.brand__img{
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			&:hover{
+				box-shadow: none;
+			}
+		}
+	}
+
+	&__description{
+		flex: 1;
+
+		& > * {
+			margin: 20px 0;
+			&:first-child{margin-top: 0;}
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+
+	&__certificates{
+		flex: 0 0 255px;
+		width: 255px;
+
+		&-label{
+			display: block;
+			margin-bottom: 15px;
+			line-height: 1.79;
+			font-weight: 700;
+		}
+	}
+
+	&__certificate{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $form-color;
+		border-radius: 2px;
+		padding: 20px;
+		@media (max-width: $phone-size) {
+			flex: 1;
+			width: 100%;
+		}
+
+		&-img{
+			max-width: 210px;
+		}
+	}
+}

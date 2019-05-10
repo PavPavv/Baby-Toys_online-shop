@@ -1,0 +1,174 @@
+@import "mob.scss";
+.header{
+	border-bottom: 1px solid $header-top-color;
+	@media(max-width: $tablet-size) {
+		border-bottom: 0;
+	}
+
+	&__nav{
+		&.header__nav{
+			&--right{
+				margin-left: auto;
+			}
+		}
+	}
+	&__top{
+		padding: 10px 0;
+		background-color: $header-top-color;
+		@media (max-width: $phone-size) {
+			display: none;
+		}
+	}
+	&__content{
+			display: flex;
+			align-items: center;
+		}
+	&__main{
+		padding: 25px 0;
+		@media(max-width: $phone-size) {
+			display: none;
+		}
+
+	}
+	&__phones{
+		display: flex;
+		margin-right: 90px;
+		& > * {
+			margin-right: 30px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__phone{
+		display: block;
+		font-size: 16px;
+		font-weight: 600;
+		color: $nav-menu-color;
+		white-space: nowrap;
+	}
+	&__shop{
+		display: flex;
+		flex: 0 0 270px;
+		justify-content: space-between;
+		margin-left: auto;
+		width: 270px;
+
+		& > * {
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__logo{
+		margin-right: 40px;
+	}
+	&__link{
+		display: block;
+		text-decoration: underline;
+		font-size: 12px;
+		line-height: 1.67;
+		color: $silver-chalice;
+	}
+	&__description{
+		display: block;
+		font-size: 12px;
+		line-height: 1.67;
+		color: $silver-chalice;
+	}
+	&__search{
+		margin-left: auto;
+
+	}
+
+	&__menu{
+		@media(max-width: $tablet-size) {
+			display: none;
+		}
+	}
+
+	&__item{
+		@media (max-width: $tablet-size) {
+			display: none;
+		}
+		&.header__item{
+
+			&--mob{
+				@media (max-width: $tablet-size) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&-address{
+		display: flex;
+		flex: 0 0 190px;
+		width: 190px;
+		@media (max-width: $tablet-size) {
+			display: none;
+		}
+
+		&__icon{
+			flex: 0 0 15px;
+			width: 15px;
+			height: 21px;
+			fill: $silver-chalice;
+		}
+
+		&__text{
+			font-size: 12px;
+			line-height: 1.67;
+			color: $nav-menu-color;
+		}
+
+		& > * {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&-goods{
+		&__price{
+			display: block;
+			font-size: 16px;
+			font-weight: 600;
+			color: $nav-menu-color;
+			white-space: nowrap;
+		}
+		&__count{
+			display: block;
+			font-size: 12px;
+			line-height: 1.67;
+			color: $silver-chalice;
+		}
+	}
+	&-basket{
+		display: flex;
+		align-items: center;
+		height: 40px;
+		padding: 0 20px;
+		border-radius: 20px;
+		background-color: $button-color;
+		cursor: pointer;
+
+		& > * {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__icon{
+			@include size(20px);
+			fill: $main-company-color;
+		}
+		&__text{
+			color: $nav-menu-color;
+			font-weight: 600;
+		}
+	}
+
+}

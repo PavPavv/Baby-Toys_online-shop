@@ -1,0 +1,29 @@
+.title{
+	&-page{
+		font-size: 24px;
+		margin-bottom: 30px;
+		font-weight: 600;
+		line-height: 1.25;
+		color: $nav-menu-color;
+	}
+	&-section{
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.76;
+	}
+
+	&-block{
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.67;
+		margin-bottom: 20px;
+	}
+
+	&-small{
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.25;
+	}
+}

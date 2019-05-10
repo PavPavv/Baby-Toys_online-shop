@@ -1,0 +1,137 @@
+.search{
+	position: relative;
+
+	&.search--open{
+		.search__body{
+			display: block;
+		}
+	}
+
+	&__icon{
+		@include size(20px);
+		fill: $main-company-color;
+		cursor: pointer;
+	}
+
+	&__body{
+		display: none;
+		position: absolute;
+		top: -35px;
+		right: 0;
+		width: 550px;
+		padding: 20px;
+		background-color: $main-color;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.21), 0 10px 20px 0 rgba(0,0,0,0.1);
+	}
+	&__form{
+		display: flex;
+		align-items: center;
+		@media(max-width: $phone-size) {
+			flex-direction: column;
+		}
+	}
+
+	&__input{
+		width: 100%;
+		padding: 0 50px 0 20px;
+		height: 50px;
+		line-height: 48px;
+		border-radius: 2px 0 0 2px;
+		border: 1px solid $form-color;
+		background-color: transparent;
+		color: $nav-menu-color;
+		border-right: 0;	
+		@media (max-width: $phone-size) {
+			border-right: 1px solid $form-color;
+		}
+
+		&::placeholder{
+			color: $placeholder-color;
+		}
+
+		&-wrapper{
+			position: relative;
+			flex: 1;
+			background-color: $main-color;
+			@media (max-width: $phone-size) {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&__clear{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 40px;
+		cursor: pointer;
+		@media(max-width: $phone-size) {
+			display: none;
+		}
+
+		&-icon{
+		@include size(16px);
+		fill: rgba(75,75,75,0.5);
+		}
+	}
+	&__btn{
+		flex: 0 0 auto;
+		height: 50px;
+		padding: 0 15px;
+		border: 0;
+		border-radius: 0 4px 4px 0;
+		font-weight: 700;
+		color: $main-color;
+		background-color: $main-company-color;
+		cursor: pointer;
+		@media (max-width: $phone-size) {
+			width: 100%;
+			border-radius: 2px;
+		}
+	}
+
+	&-result{
+		margin-bottom: 30px;
+
+		&__header{
+
+			& > * {
+				margin: 15px 0;
+
+				&:first-child{
+					margin-top: 0;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__request{
+			padding: 20px;
+			border-radius: 4px; 
+			background-color: $main-color;
+
+			& > * {
+				margin: 15px 0;
+
+				&:first-child{
+					margin-top: 0;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__label{
+			display: block;
+			font-weight: 600;
+			color: $nav-menu-color;
+		}
+	}
+}

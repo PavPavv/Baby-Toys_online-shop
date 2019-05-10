@@ -1,0 +1,37 @@
+extends template/main
+
+block variables
+	- var title = 'Все бренды'
+	- var pageClass = 'brands-page'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current Бренды
+	section.s-brands
+		.container
+			.brands
+				h1.title-page Бренды
+				ul.brands__list
+					each brand in [{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'puky',name:'Puky'},{img:'stiga',name:'Stiga'},{img:'globber',name:'Globber'},{img:'smile',name:'Smiley'}]
+						li.brands__item
+							a(href="brand.html").brand
+								img(src=`i/brands/${brand.img}.jpg` alt="Лого бренда").brand__img
+								span.brand__name=brand.name
+					each brand in [{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'puky',name:'Puky'},{img:'stiga',name:'Stiga'},{img:'globber',name:'Globber'},{img:'smile',name:'Smiley'}]
+								li.brands__item
+									a(href="brand.html").brand
+										img(src=`i/brands/${brand.img}.jpg` alt="Лого бренда").brand__img
+										span.brand__name=brand.name
+					each brand in [{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'puky',name:'Puky'},{img:'stiga',name:'Stiga'},{img:'globber',name:'Globber'},{img:'smile',name:'Smiley'}]
+								li.brands__item
+									a(href="brand.html").brand
+										img(src=`i/brands/${brand.img}.jpg` alt="Лого бренда").brand__img
+										span.brand__name=brand.name
+				.content-block
+					h3.title-block Интернет-магазин детских велосипедов и самокатов
+					p.text Интернет-магазин Baby-Toys предлагает широчайший выбор детского транспорта. В каталоге вы найдете лучшие велосипеды, самокаты, беговелы от ведущих производителей Европы и Китая по конкурентоспособным ценам. В наличии представлены модели самых разных типов, предназначенные для любого возраста. Подарите своему ребенку ни с чем не сравнимую радость движения!

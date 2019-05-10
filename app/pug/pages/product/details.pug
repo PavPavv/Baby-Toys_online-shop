@@ -1,0 +1,17 @@
+.product-details.tabs
+	.mobile-scroll-inner
+		ul.tabs-navigation.product-details-navigation
+			li(show-tab="tab-description").product-details-navigation__item.tabs-navigation__item.tabs-navigation__item--active Описание
+			li(show-tab="tab-characteristics").product-details-navigation__item.tabs-navigation__item Характеристки
+			li(show-tab="tab-reviews").product-details-navigation__item.tabs-navigation__item
+				span Отзывы
+				span.product-details-navigation__count 3
+			li.product-details-navigation__item.tabs-navigation__item
+				a(href="#l-same-goods").scroll-link Похожие товары
+	.tabs__body.product-details__body
+		.tab.tab--active.tab-description
+			include details/tab1
+		.tab.tab-characteristics
+			include details/tab2
+		.tab.tab-reviews
+			include details/tab3

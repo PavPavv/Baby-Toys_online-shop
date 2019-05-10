@@ -1,0 +1,84 @@
+.select{
+	position: relative;
+
+	&.select--open{
+
+		.select{
+
+			&__body{
+				display: block;
+			}
+
+			&__icon{
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__header{
+		display: flex;
+		align-items: center;
+		height: 40px;
+		padding: 0 15px;
+		border-radius: 2px;
+		border: 1px solid $form-color;
+		font-size: 12px;
+		cursor: pointer;
+		& > * {
+			margin-right: 10px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		&.select__header--multi{
+
+			.select{
+
+				&__current{
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	&__description{
+		@media (max-width: $phone-size) {
+			display: none;
+		}
+	}
+
+	&__icon{
+		@include size(15px);
+		margin-left: auto;
+		fill: $main-company-color;
+	}
+
+	&__body{
+		z-index: 1;
+		position: absolute;
+		display: none;
+		border: 1px solid $form-color;
+		border-radius: 0 0 2px;
+		border-top: 0;
+		width: auto;
+		min-width: 100%;
+		left: 0;
+		top: 100%;
+		background-color: $main-color;
+	}
+
+	&-list{
+
+		&__item{
+			height: 40px;
+			padding: 0 10px;
+			font-size: 12px;
+			line-height: 40px;
+			cursor: pointer;
+			&:hover{
+				background-color: $header-top-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.review-prev{
+	&__text{
+		line-height: 1.79;
+		margin-bottom: 15px;
+	}
+
+	&__author{
+		display: inline-block;
+		height: 20px;
+		line-height: 18px;
+		border: 1px solid rgba(38,38,38,0.1);
+		border-radius: 20px;
+		padding: 0 15px;
+		font-size: 13px;
+		color: $date-color;
+		background-color: $main-color;
+	}
+}

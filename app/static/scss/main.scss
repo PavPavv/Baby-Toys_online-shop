@@ -1,0 +1,85 @@
+@import "libs.scss";
+@import "utils/fonts.scss";
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+
+html{
+	font-size: $base-font-size;
+	height: 100%;
+
+	&.fixed{
+		overflow: hidden;
+
+		body{
+			overflow: hidden;
+		}
+	}
+}
+body{
+	font-family: $main-font;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: $corporate-color;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+ul, li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+p{
+	margin: 0;
+}
+audio,
+video,
+canvas,
+iframe,
+img,
+svg,
+textarea{vertical-align: middle;}
+
+textarea{resize: none;}
+
+section{
+	position: relative;
+	padding: 35px 0;
+}
+
+input,
+select,
+button{outline: none;}
+
+*, *:before, *:after{box-sizing: border-box;}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	left: 0;
+	transition: all linear .5s;
+	&.mobile-menu-open{
+		left: 100%;
+	}
+
+}
+.content{
+	flex: 1 0 auto;
+}
+.container{
+	position: relative;
+	margin: 0 auto;
+	max-width: $content-size;
+	width: 100%;
+	padding: 0 15px;
+}
+
+//Modules
+
+@import "modules/modules";

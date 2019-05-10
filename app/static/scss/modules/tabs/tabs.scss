@@ -1,0 +1,31 @@
+@import "hits.scss";
+
+.tab{
+	display: none;
+
+	&.tab{
+
+		&--active{
+			display: block;
+			animation: tab linear .5s forwards;
+		}
+	}
+}
+.tabs{
+
+	&-navigation{
+
+		&__item{
+			cursor: pointer;
+		}
+	}
+}
+
+@keyframes tab {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

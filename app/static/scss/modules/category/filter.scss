@@ -1,0 +1,170 @@
+.filter{
+	position: relative;
+	background-color: $main-color;
+
+	&.filter--open{
+
+		@media (max-width: $tablet-size) {
+			display: block;
+		}
+	}
+
+	@media (max-width: $tablet-size) {
+		z-index: 5;	
+		display: none;
+		position: absolute;
+		top: 0;
+		left: -1px;
+		box-shadow: 0 5px 30px 0 rgba(75,75,75,.5);
+	}
+	@media (max-width: $phone-size) {
+		top: 55px;
+	}
+
+	&__body{
+		& > * {
+			margin: 20px 0;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__block{
+		padding: 20px;
+		border-radius: 2px;
+		border: 1px solid $form-color;
+
+		& > * {
+			margin: 10px 0;
+			&:first-child{
+				margin-top: 0;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: $tablet-size) {
+			border: none;
+		}
+	}
+
+	&__title{
+		display: block;
+		margin-bottom: 10px;
+		font-weight: 700;
+		line-height: 2.14;
+		color: $main-company-color;
+	}
+
+	&__buttons{
+		display: flex;
+		
+		& > * {
+			flex: 1;
+			margin-right: 15px;	
+			&:last-child{
+			}
+		}	
+	}
+
+	&__row{
+		
+		& > * {
+		margin: 20px 0;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{margin-bottom: 0;}
+	}
+
+	}
+
+	&__item{
+		margin-bottom: 10px;
+		&:last-child{margin-bottom: 0};
+	}
+
+	&__link{
+		font-weight: 600;
+		color: $nav-menu-color;
+	}
+	
+
+	&__label{
+		display: block;
+		margin-bottom: 10px;
+		font-size: 14px;
+		font-weight: 700;
+		color: $nav-menu-color;
+	}
+
+	&-list{
+
+		&__item{
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		&__link{
+			font-weight: 600;
+			color: $nav-menu-color;
+		}
+	}
+
+	&-mobile{
+
+		&__toggle{
+			display: none;
+			border: 1px solid $form-color;
+			border-radius: 2px;
+			height: 40px;
+			margin-left: 20px;
+			padding: 0 15px;
+			align-items: center;
+			line-height: 38px;
+			cursor: pointer;
+			@media (max-width: $tablet-size) {
+				display: flex;
+				font-size: 12px;
+			}
+			& > * {
+				margin-right: 10px;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+
+			&-icon{
+				@include size(12px);
+				fill: $main-company-color;
+			}
+		}
+
+		&__close{
+			@include size(40px);
+			z-index: 1;
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			background-color: $main-company-color;
+			@media (max-width: $tablet-size) {
+				display: flex;
+			}
+
+			&-icon{
+				@include size(18px);
+				fill: $main-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+section.s-slider#l-same-goods
+	.container
+		.products-border-line-slider
+			.products-border-line-slider__header
+				h2.title-section Похожие товары
+				.products-border-line-slider__navigation
+					.products-border-line-slider__btn.products-border-line-slider__btn--prev
+						+icon('left-arrow','products-border-line-slider__icon')
+					.products-border-line-slider__btn.products-border-line-slider__btn--next
+						+icon('right-arrow','products-border-line-slider__icon')
+			.products-border-line-slider__body
+				.js-products-border-line-slider
+					include ../../modules/products/prev-1
+					include ../../modules/products/prev-2
+					include ../../modules/products/prev-3
+					include ../../modules/products/prev-4

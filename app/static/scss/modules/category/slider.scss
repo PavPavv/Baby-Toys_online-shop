@@ -1,0 +1,86 @@
+.category-slider{
+	padding: 0 0 20px;
+	border-radius: 4px;
+	background-color: $header-top-color;
+
+	&__header{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 10px;	
+	}
+
+	&__title{
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		padding: 10px 20px;
+		text-align: center;
+		font-family: $main-font;
+		line-height: 1.58;
+		font-size: 19px;
+		font-weight: 700;
+		color: $main-color;
+		background-color: rgba(52,59,76,.5);
+		@media (max-width: $phone-size) {
+			font-size: 15px;
+			text-align: center;
+		}
+	}
+
+	&__item{
+		margin: 0 10px;
+		padding: 0 10px;
+		text-align: center;
+		outline: none;
+		font-size: 13px;
+		@media (max-width: $phone-size) {
+			padding: 0;
+		}
+	}
+
+	&__icon{
+		@include size(30px);
+		display: block;
+		margin: 0 auto 15px;
+		fill: $main-company-color;
+	}
+
+	&__dots{
+		display: none;
+		justify-content: center;
+		position: absolute;
+		bottom: -20px;
+		width: 100%;
+		@media (max-width: $tablet-size) {
+			display: flex;
+		}
+
+		.slick-dots{
+			display: flex;
+			align-items: center;
+
+			& > * {
+				margin-right: 10px;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+
+			li{
+
+				&.slick-active{
+
+					.category-slider__dot{
+						background-color:$main-company-color;
+					}						
+				}
+			}
+		}
+	}
+
+	&__dot{
+		@include size(10px);
+		border-radius: 50%;
+		background-color: $form-color;
+		cursor: pointer;
+	}
+}

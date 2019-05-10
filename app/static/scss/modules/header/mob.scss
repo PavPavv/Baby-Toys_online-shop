@@ -1,0 +1,33 @@
+.header__mobile{
+	z-index: 5;
+	display: none;
+	position: relative;
+	box-shadow: 0 1px 3px 0 rgba(38,38,38,.5), inset 0 -1px 0 0 #eef2f4;
+	@media(max-width: $tablet-size) {
+		display: block;
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+		@media(max-width: $phone-size) {
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0;
+		}
+
+		& > * {
+			flex: 0 0 48%;
+			width: 48%;
+			@media(max-width: $phone-size) {
+				flex: 0 0 auto;
+				width: auto;
+			}
+		}
+	}
+
+	.search{
+		@media(max-width: $phone-size) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+.filter__body
+	.filter__block
+		span.filter__title Подкатегории
+		ul.filter__list
+			each link in ['Беговелы 2 в 1','Беговелы-каталки','Беговелы-самокаты','Спортивные']
+				li.filter__item
+					a(href="").filter__link=link
+	.filter__block
+		span.filter__title Подбор параметров
+		.filter__row
+			.select
+				.select__header
+					span.select__current Пол
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item для мальчиков 
+							span.select-list__amount (138)
+						li.select-list__item для девочек 
+							span.select-list__amount (103)
+			.select
+				.select__header
+					span.select__current Бренд
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item Micro 
+							span.select-list__amount (12)
+						li.select-list__item Hudora 
+							span.select-list__amount (11)
+						li.select-list__item Globber 
+							span.select-list__amount (11)
+						li.select-list__item Puky 
+							span.select-list__amount (59)
+						li.select-list__item Kokua 
+							span.select-list__amount (31)
+						li.select-list__item Scool 
+							span.select-list__amount (1)
+						li.select-list__item Strider 
+							span.select-list__amount (4)
+			.select
+				.select__header
+					span.select__current Страна
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item Германия 
+							span.select-list__amount (45)
+						li.select-list__item Швейцария 
+							span.select-list__amount (12)
+						li.select-list__item США 
+							span.select-list__amount (4)
+						li.select-list__item Франция 
+							span.select-list__amount (11)		
+			.select
+				.select__header
+					span.select__current Материал
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item аллюминий 
+							span.select-list__amount (48)
+						li.select-list__item дерево 
+							span.select-list__amount (21)
+						li.select-list__item сталь 
+							span.select-list__amount (69)	
+			.select
+				.select__header
+					span.select__current Возраст
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item от 1 года 
+							span.select-list__amount (16)
+						li.select-list__item от 1,5 года 
+							span.select-list__amount (26)
+						li.select-list__item от 2 лет 
+							span.select-list__amount (68)
+						li.select-list__item от 2,5 лет 
+							span.select-list__amount (10)
+						li.select-list__item от 3 лет 
+							span.select-list__amount (13)
+						li.select-list__item от 6 лет 
+							span.select-list__amount (4)
+			.select
+				.select__header
+					span.select__current Тип колес
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item двухколесные 
+							span.select-list__amount (45)
+						li.select-list__item четырехколесные 
+							span.select-list__amount (11)
+						li.select-list__item колесы из пены EVA 
+							span.select-list__amount (7)
+						li.select-list__item с надувными колесами 
+							span.select-list__amount (54)
+			.select
+				.select__header
+					span.select__current Диаметр колес
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 200 
+							span.select-list__amount (12)
+						li.select-list__item 250 
+							span.select-list__amount (54)
+						li.select-list__item 317 
+							span.select-list__amount (86)
+						li.select-list__item 406 
+							span.select-list__amount (7)			
+			.select
+				.select__header
+					span.select__current Опции
+					+icon('drop-down-arrow','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item с амортизаторами 
+							span.select-list__amount (15)
+						li.select-list__item с подножкой 
+							span.select-list__amount (30)
+						li.select-list__item с сиденьем 
+							span.select-list__amount (141)		
+		.filter__row
+			.filter__color
+				span.filter__label Цвет
+				ul.color-list
+					each color in ['000000','F5999D','ffffff','8FC63D','0000FF','7A0045','D95B1F','8DD4F8','E68F93','009900','D1914B','103090','A1410D','6CCFF7']
+						if(color === "ffffff")
+							li.color-list__item.color-list__item--white(style=`background-color:#${color}`)
+						else
+							li.color-list__item(style=`background-color:#${color}`)
+		.filter__buttons
+			button.btn.btn--contour-gray Сброс
+			button.btn.btn--bg-orange Подбор

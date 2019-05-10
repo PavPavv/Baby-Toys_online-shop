@@ -1,0 +1,83 @@
+mixin footerNavLink(link,text)
+	li.footer-nav__item
+		a(href=link).footer-nav__link=text
+
+footer.footer
+	.footer__main
+		.container
+			.footer__navigation
+				.footer__item
+					ul.footer-nav
+						+footerNavLink('','Самокаты')
+						+footerNavLink('','Беговелы')
+						+footerNavLink('','Велосипеды')
+						+footerNavLink('','Скейтборды')
+						+footerNavLink('','Роликовые коньки')
+						+footerNavLink('','Каталки')
+						+footerNavLink('','Батуты')
+						+footerNavLink('','Снегокаты')
+						+footerNavLink('','Тюбинги')
+						+footerNavLink('','Ледовые коньки')
+						+footerNavLink('','Спортивный инвентарь')
+						+footerNavLink('','Веломобили')
+						+footerNavLink('','Аксессуары')
+						+footerNavLink('','Запчасти')
+						+footerNavLink('','Распродажа')
+						+footerNavLink('','Настольные игры')
+				.footer__item
+					ul.footer-nav
+						+footerNavLink('','О компании')
+						+footerNavLink('','Доставка')
+						+footerNavLink('','Оплата')
+						+footerNavLink('','Поставщикам')
+						+footerNavLink('','Новости')
+						+footerNavLink('','Отзывы')
+				.footer__item.footer__item--wide
+					ul.footer-nav
+						+footerNavLink('','Контакты')
+						+footerNavLink('','Вопросы и ответы')
+						+footerNavLink('','Карта сайта')
+					span.footer__address Москва, проспект Андропова, д. 11, к. 2, павилион №1/2
+			.footer__contacts
+				.footer__phones
+					a(href="tel:88007077518").footer__phone 8 (800) 707-75-18
+					span.footer__text Звонок бесплатный
+					span.footer__text +7(495)120-30-34
+				a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
+			.footer__contacts-mob
+				.footer__item
+					a(href="tel:88007077518").footer__phone 8 (800) 707-75-18
+					span.footer__text Звонок бесплатный
+				.footer__item.footer__item--text-right
+					span.footer__text +7(495)120-30-34
+					a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
+				.footer__item.footer__item--full
+					.yandex-market
+						img(src="i/icon/yandex.svg" alt="иконка Яндекс Маркет").yandex-market__img
+						a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
+	.footer__socials
+		.container
+			ul.socials
+				li.socials__item
+					a(href="").socials__link
+						img(src="i/icon/instagram.svg" alt="иконка соц сети").socials__icon
+						span.socials__name Instagram
+				li.socials__item
+					a(href="").socials__link
+						img(src="i/icon/facebook.svg" alt="иконка соц сети").socials__icon
+						span.socials__name Facebook
+				li.socials__item
+					a(href="").socials__link
+						img(src="i/icon/ok.svg" alt="иконка соц сети").socials__icon
+						span.socials__name Одноклассники
+				li.socials__item
+					a(href="").socials__link
+						img(src="i/icon/vk.svg" alt="иконка соц сети").socials__icon
+						span.socials__name Вконтакте
+			.yandex-market
+				img(src="i/icon/yandex.svg" alt="иконка Яндекс Маркет").yandex-market__img
+				a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
+.footer__bottom
+	.container
+		span.copyright &copy; 2010-2019 «Baby-Toys». Все права защищены. Информация сайта защищена законом об авторских правах.
+		a(href="").footer__policy Политика обработки персональных данных

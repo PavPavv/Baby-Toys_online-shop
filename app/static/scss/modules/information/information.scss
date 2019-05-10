@@ -1,0 +1,92 @@
+@import "news.scss";
+@import "review.scss";
+@import "brands.scss";
+
+.information{
+	display: flex;
+
+	@media (max-width: $tablet-size) {
+		flex-wrap: wrap;
+	}
+	@media (max-width: $phone-size) {
+		flex-direction: column;
+	}
+
+	& > * {
+		flex: 1;
+		padding-right: 30px;
+
+		@media (max-width: $tablet-size) {
+			flex: 0 0 50%;
+			width: 50%;
+				
+		}
+		@media (max-width: $phone-size) {
+			flex: 1;
+			width: 100%;
+		}
+
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+	
+	&-item{
+		@media (max-width: $phone-size) {
+			margin-top: 40px;	
+		}
+		&:first-child{
+			@media (max-width: $phone-size) {
+				margin-top: 0;
+			}
+		}
+		&__link{
+			display: inline-block;
+			border-bottom: 1px solid rgba(38,38,38,0.15);
+			color: $corporate-color;
+		}
+
+		&__count{
+			color: $count-color;
+		}
+
+		&__body{
+			height: 250px;
+			@media (max-width: $phone-size) {
+				height: auto;
+				margin-bottom: 20px;
+			}
+		}
+
+		&__footer{
+			display: flex;
+
+			& > * {
+				margin-right: 5px;
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+		&.information-item--wide{
+			@media (max-width: $tablet-size) {
+				flex: 1;
+				width: 100%;
+				margin-top: 40px;
+			}
+
+			.information-item{
+				&__body{
+					@media (max-width: $tablet-size) {
+						height: 150px;
+					}
+					@media (max-width: $phone-size) {
+						height: auto;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.mobile-user-nav{
+	display: none;
+	margin-left: auto;
+	@media (max-width: $phone-size) {
+		display: block;
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item{
+		margin-right: 5px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	&__link{
+		@include size(40px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: $phone-small-size) {
+			@include size(30px);
+		}
+	}
+
+	&__icon{
+		@include size(20px);
+		fill: $main-company-color;
+		@media (max-width: $phone-small-size) {
+			@include size(18px);
+		}
+	}
+}
